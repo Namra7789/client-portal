@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Client</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Update Client</h1>
+    <form action="/saveClient" method="post">
+        <input type="hidden" name="id" th:value="${client.id}">
+        <input type="text" name="employeeName" th:value="${client.employeeName}" required>
+        <input type="text" name="poStatus" th:value="${client.poStatus}" required>
+        <input type="number" name="salary" th:value="${client.salary}" step="0.01" required>
+        <input type="number" name="performanceBonus" th:value="${client.performanceBonus}" step="0.01" required>
+        <input type="number" name="ctc" th:value="${client.ctc}" step="0.01" required>
+        <input type="number" name="monthlyBilling" th:value="${client.monthlyBilling}" step="0.01" required>
+        <input type="number" name="monthlyMargin" th:value="${client.monthlyMargin}" step="0.01" required>
+        <input type="text" name="team" th:value="${client.team}" required>
+        <input type="text" name="poNo" th:value="${client.poNo}" required>
+        <input type="date" name="poDate" th:value="${client.poDate}" required>
+        <input type="number" name="poValue" th:value="${client.poValue}" step="0.01" required>
+        <input type="date" name="poStart" th:value="${client.poStart}" required>
+        <input type="date" name="poEnd" th:value="${client.poEnd}" required>
+        <button type="submit">Update</button>
+    </form>
+    <a href="/">Back to Client List</a>
+</body>
+</html>

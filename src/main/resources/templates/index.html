@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Portal</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Client Portal</h1>
+    <a href="/showNewClientForm">Add New Client</a>
+    <h2>Client List</h2>
+    <table>
+        <tr>
+            <th>Employee Name</th>
+            <th>PO Status</th>
+            <th>Salary</th>
+            <th>Performance Bonus</th>
+            <th>CTC</th>
+            <th>Monthly Billing</th>
+            <th>Monthly Margin</th>
+            <th>Team</th>
+            <th>PO No</th>
+            <th>PO Date</th>
+            <th>PO Value (excluding GST)</th>
+            <th>PO Start</th>
+            <th>PO End</th>
+            <th>Actions</th>
+        </tr>
+        <tr th:each="client : ${clients}">
+            <td th:text="${client.employeeName}"></td>
+            <td th:text="${client.poStatus}"></td>
+            <td th:text="${client.salary}"></td>
+            <td th:text="${client.performanceBonus}"></td>
+            <td th:text="${client.ctc}"></td>
+            <td th:text="${client.monthlyBilling}"></td>
+            <td th:text="${client.monthlyMargin}"></td>
+            <td th:text="${client.team}"></td>
+            <td th:text="${client.poNo}"></td>
+            <td th:text="${client.poDate}"></td>
+            <td th:text="${client.poValue}"></td>
+            <td th:text="${client.poStart}"></td>
+            <td th:text="${client.poEnd}"></td>
+            <td>
+                <a th:href="@{/showFormForUpdate/{id}(id=${client.id})}">Edit</a>
+                <a th:href="@{/deleteClient/{id}(id=${client.id})}">Delete</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

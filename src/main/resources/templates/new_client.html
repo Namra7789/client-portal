@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Client</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Add New Client</h1>
+    <form action="/saveClient" method="post">
+        <input type="text" name="employeeName" placeholder="Employee Name" required>
+        <input type="text" name="poStatus" placeholder="PO Status" required>
+        <input type="number" name="salary" placeholder="Salary" step="0.01" required>
+        <input type="number" name="performanceBonus" placeholder="Performance Bonus" step="0.01" required>
+        <input type="number" name="ctc" placeholder="CTC" step="0.01" required>
+        <input type="number" name="monthlyBilling" placeholder="Monthly Billing" step="0.01" required>
+        <input type="number" name="monthlyMargin" placeholder="Monthly Margin" step="0.01" required>
+        <input type="text" name="team" placeholder="Team" required>
+        <input type="text" name="poNo" placeholder="PO No" required>
+        <input type="date" name="poDate" placeholder="PO Date" required>
+        <input type="number" name="poValue" placeholder="PO Value (excluding GST)" step="0.01" required>
+        <input type="date" name="poStart" placeholder="PO Start" required>
+        <input type="date" name="poEnd" placeholder="PO End" required>
+        <button type="submit">Save</button>
+    </form>
+    <a href="/">Back to Client List</a>
+</body>
+</html>
