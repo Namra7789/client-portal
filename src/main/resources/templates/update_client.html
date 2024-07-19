@@ -22,6 +22,7 @@
         <input type="number" name="poValue" th:value="${client.poValue}" step="0.01" required>
         <input type="date" name="poStart" th:value="${client.poStart}" required>
         <input type="date" name="poEnd" th:value="${client.poEnd}" required>
+        <input type="text" name="workStatus" th:value="${client.workStatus}" required>
         <button type="submit">Update</button>
     </form>
     <a href="/">Back to Client List</a>

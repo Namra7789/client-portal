@@ -24,6 +24,7 @@
             <th>PO Value (excluding GST)</th>
             <th>PO Start</th>
             <th>PO End</th>
+            <th>Work Status</th>
             <th>Actions</th>
         </tr>
         <tr th:each="client : ${clients}">
@@ -40,6 +41,7 @@
             <td th:text="${client.poValue}"></td>
             <td th:text="${client.poStart}"></td>
             <td th:text="${client.poEnd}"></td>
+            <td th:text="${client.workStatus}"></td>
             <td>
                 <a th:href="@{/showFormForUpdate/{id}(id=${client.id})}">Edit</a>
                 <a th:href="@{/deleteClient/{id}(id=${client.id})}">Delete</a>

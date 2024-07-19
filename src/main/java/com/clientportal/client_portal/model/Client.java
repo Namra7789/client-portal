@@ -23,6 +23,7 @@ public class Client {
     private double poValue;
     private LocalDate poStart;
     private LocalDate poEnd;
+    private String workStatus;
 
     // Getters and Setters
 
@@ -136,5 +137,13 @@ public class Client {
 
     public void setPoEnd(LocalDate poEnd) {
         this.poEnd = poEnd;
+    }
+
+    public String getWorkStatus() {
+        return workStatus;
+    }
+
+    public void setWorkStatus(String workStatus) {
+        this.workStatus = workStatus;
     }
 }
